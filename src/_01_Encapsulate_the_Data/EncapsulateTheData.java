@@ -11,9 +11,25 @@ public class EncapsulateTheData {
 	/* 
 	 * All negative arguments should set itemsReceived to 0.
 	 */
+	private Object memberObj;
+	private String nomenclature;
+	private double degreesTurned;
+	private int itemsReceived;
 
-	int itemsReceived;
+	public void setItemsReceived(int randomPositiveNum) {
+		// TODO Auto-generated method stub
+		itemsReceived=randomPositiveNum;
+	}
 
+	public Integer getItemsReceived() {
+		// TODO Auto-generated method stub
+		if (itemsReceived > 0) {
+		return itemsReceived;
+		}
+		else {
+			return 0;
+		}
+	}
 	/*
 	 * degreesTurned must be locked between 0.0 and 360.0 inclusive.
 	 * 
@@ -21,7 +37,7 @@ public class EncapsulateTheData {
 	 * bound.
 	 */
 
-	double degreesTurned;
+	
 
 	/*
 	 * nomenclature must not contain an empty String.
@@ -30,8 +46,43 @@ public class EncapsulateTheData {
 	 * space.
 	 */
 
-	String nomenclature;
+	public void setDegreesTurned(double randomPositiveNum) {
+		degreesTurned = randomPositiveNum;
+	}
 
+	public Double getDegreesTurned() {
+		// TODO Auto-generated method stub
+		if (degreesTurned >= 0.0 && degreesTurned <= 360.0) {
+			return degreesTurned;	
+		}
+		else if (degreesTurned < 0.0){
+			return 0.0;
+		}
+		else if (degreesTurned > 360.0) {
+			return 360.0;
+		}
+		else {
+		return 66.6;	
+		}
+		
+	}
+	
+
+
+	public void setNomenclature(String randomString) {
+		nomenclature =randomString;
+	}
+
+	public Object getNomenclature() {
+		// TODO Auto-generated method stub
+		if (nomenclature != "") {
+		return nomenclature;
+		}
+		else {
+			return " ";
+		} 
+	}
+	
 	/*
 	 * memberObj must not be a String.
 	 * 
@@ -48,6 +99,16 @@ public class EncapsulateTheData {
 	 * System.out.println(rob instanceof Random); //prints false
 	 */
 
-	Object memberObj;
+	
+
+	
+	public void setMemberObj(Object randomObject) {
+		memberObj = randomObject;
+	}
+
+	public Object getMemberObj() {
+		// TODO Auto-generated method stub
+		return memberObj;
+	}
 
 }
