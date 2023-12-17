@@ -108,7 +108,12 @@ public class EncapsulateTheData {
 
 	public Object getMemberObj() {
 		// TODO Auto-generated method stub
-		return memberObj;
+		if (memberObj instanceof String) {
+			return false;	
+		}
+		else {
+			return memberObj;
+		}
 	}
 
 }
