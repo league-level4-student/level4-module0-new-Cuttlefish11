@@ -2,24 +2,33 @@ package _03_Intro_to_Enums;
 
 import javax.swing.JOptionPane;
 
-public enum StatesOfMatter {
-SOLID, LIQUID, GAS;
-
+enum States {
+SOLID(0), LIQUID(25.55), GAS(100);
+	double celsiusTemp;
+	double farenheit;
+	private  States (double celsiusTemp) {
+		this.celsiusTemp = celsiusTemp;
+	}
+	private void convert(double farenheit) {
+	farenheit = (this.celsiusTemp*9/5)+32;	
+	}
+	//finished step 9
 }
-//class problems
-public class classy{
-public void StatesOfMatter(){
-	int celsiusTemp;
-StatesOfMatter[] som = StatesOfMatter.values();	
+
+public class StatesOfMatter {
+
+	
+	public static void main(String[] args) {
+	
+States[] som = States.values();	
 String query = JOptionPane.showInputDialog("Enter a state of matter");
 for (int i = 0; i < som.length; i++) {
-	if(som[i].toString()==query) {
-		System.out.println(som[i].ordinal()); 
+	System.out.println(som[i].toString() + " " + query);
+	if(som[i].toString().equals(query)) {
+		System.out.println("Your elemental number is: " + som[i].ordinal()); 
 		
 	}
-	
 }
-
 
 }
 }
