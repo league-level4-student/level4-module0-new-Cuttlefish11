@@ -101,7 +101,17 @@ public class SnakeGame implements ActionListener, KeyListener {
 
 	@Override
 	public void keyTyped(KeyEvent e) {
-	}
+	/*switch (key) {
+	case KeyEvent.VK_UP:
+		
+		break;
+
+	default:
+		break;
+	} (){
+		
+	}*/
+	} 
 
 	@Override
 	public void keyReleased(KeyEvent e) {

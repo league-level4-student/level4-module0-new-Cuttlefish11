@@ -32,7 +32,11 @@ public class Snake {
 	}
 
 	public void update() {
-
+int headX;
+int headY;
+Location l = head.getLocation();
+headX = l.getX();
+headY = l.getY();
 		/*
 		 * Create variables for the next X and Y location of the snake's head.
 		 * Initialize them to the current X and Y locations.
